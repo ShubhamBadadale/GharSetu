@@ -1,0 +1,15 @@
+
+
+
+<script>
+  const name = localStorage.getItem("username");
+  const language = localStorage.getItem("language");
+
+  const greeting = document.getElementById("greeting");
+
+  if (name) {
+    greeting.textContent = `Hello ${name}`;
+  } else {
+    greeting.textContent = "Hello";
+  }
+</script>

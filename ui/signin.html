@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GharSetu</title>
+</head>
+<body>
+
+<h1>GharSetu</h1>
+
+<form id="userInfo">
+  <fieldset>
+    <legend>User Info</legend>
+
+    <label for="username">Name:</label>
+    <input type="text" id="username" required>
+
+    <br><br>
+
+    <label>Your Language:</label><br>
+
+    <input type="radio" name="language" value="English" checked> English
+    <input type="radio" name="language" value="Marathi"> Marathi
+    <input type="radio" name="language" value="Hindi"> Hindi
+
+    <br><br>
+
+    <button type="submit">Continue</button>
+  </fieldset>
+</form>
+
+<script>
+  const form = document.getElementById("userInfo");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("username").value;
+    const language = document.querySelector(
+      'input[name="language"]:checked'
+    ).value;
+
+    // STORE DATA
+    localStorage.setItem("username", name);
+    localStorage.setItem("language", language);
+
+    // GO TO NEXT PAGE
+    window.location.href = "index.html";
+  });
+</script>
+
+</body>
+</html>
