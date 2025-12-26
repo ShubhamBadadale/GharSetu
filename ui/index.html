@@ -4,127 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GharSetu</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-   <style>
-    * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 
-/* Top bar */
-.topbar {
-  height: 56px;
-  background: #00695c;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 12px;
-}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-.topbar button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  margin-right: 12px;
-  cursor: pointer;
-}
+  <link rel="stylesheet" href="style.css">
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -260px;           /* hidden */
-  width: 260px;
-  height: 100vh;
-  background: #ffffff;
-  border-right: 1px solid #ddd;
-  padding: 16px;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-
-.sidebar a {
-  display: block;
-  padding: 12px 0;
-  color: #333;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  background: #f5f5f5;
-}
-
-/* Close button */
-.closeBtn {
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 16px;
-}
-
-/* Sidebar open state */
-.sidebar.open {
-  left: 0;
-}
-
-/* Main content */
-.content {
-  padding: 16px;
-  margin-top: 56px;
-}
-
-   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  e>
 </head>
 <body>
 
-<!-- Top Bar -->
-<header class="topbar">
-  <button id="menuBtn">&#9776;</button>
-  <h1>GharSetu</h1>
-</header>
+  <!-- App Wrapper -->
+  <div class="app">
 
-<!-- Sidebar -->
-<nav class="sidebar" id="sidebar">
-  <button class="closeBtn" id="closeBtn">&times;</button>
-  <a href="#">Home</a>
-  <a href="#">Vendors</a>
-  <a href="#">Summary</a>
-</nav>
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button id="menuBtn">&#9776;</button>
+      
+      <h1>GharSetu</h1>
+    </header>
 
-<!-- Main Content -->
-<main class="content">
-  <h2>Hello Shubham</h2>
-  <p>Baat ghar-ghar ki</p>
-</main>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <button class="closeBtn" id="closeBtn">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="vender.html">Vendors</a>
+      <a href="grocery.html">Grocery List</a>
+      <a href="#">Summary</a>
+    </nav>
+    <div class="backdrop" id="backdrop"></div>
 
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-const closeBtn = document.getElementById("closeBtn");
-const sidebar = document.getElementById("sidebar");
 
-menuBtn.addEventListener("click", () => {
-  sidebar.classList.add("open");
-});
+    <!-- Main Content -->
+    <main class="content">
+      <!-- <img src="./images/Logo.jpg" alt=""> -->
+      <h2 id="greeting">Hello</h2>
+      <p class="tagline">Baat ghar-ghar ki</p>
 
-closeBtn.addEventListener("click", () => {
-  sidebar.classList.remove("open");
-});
+      <div class="cards">
+        <button id="card-button"
+        onclick="
+        window.open('vender.html','_self');
+        ">
+            <i class="fa-solid fa-broom"></i><h3>Vendors</h3>
+          </button>       
+         <button id="card-button"
+        onclick="
+        window.open('grocery.html','_self');
+        ">
+            <i class="fa-solid fa-clipboard-list"></i><h3>Grocery</h3>
+          </button>
+        
 
-const name = localStorage.getItem("username");
-  const language = localStorage.getItem("language");
+      </div>
+    </main>
 
-  const greeting = document.getElementById("greeting");
+  </div>
 
-  if (name) {
-    greeting.textContent = `Hello ${name}`;
-  } else {
-    greeting.textContent = "Hello";
-  }
-
-</script>
+  <script src="style.js"></script>
 </body>
 </html>

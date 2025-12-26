@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+<!-- App Wrapper -->
+  <div class="app">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button id="menuBtn">&#9776;</button>
+      
+      <h1>GharSetu</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <button class="closeBtn" id="closeBtn">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="#">Vendors</a>
+      <a href="grocery.html">Grocery List</a>
+      <a href="#">Summary</a>
+    </nav>
+    <div class="backdrop" id="backdrop"></div>
+
+
+    <!-- Main Content -->
+    <main class="content">
+      <h2 id="greeting">Grocery Page</h2>
+      <p class="tagline">Baat ghar-ghar ki</p>
+
+        <div class="filter"></div>
+        <div class="shopping">
+            <div class="grocery-item">
+                <!-- CheckBox -->
+                <input type="checkbox" class="item-check"/>
+                <!-- Image -->
+                <img src="./images/Logo.jpg" alt="Rice" class="item-icon" />
+
+                 <!-- Item details -->
+                <div class="item-detail">
+                    <div class="item-name">Rice</div>
+
+                    <!-- Quantity control -->
+                    <div class="item-quantity">
+                          <span class="label">Qty:</span>
+
+                          <input
+                            type="number"
+                            class="qty-wheel"
+                            min="0"
+                            max="50"
+                            value="1"
+                          />
+
+                          <span class="unit">kg</span>
+                    </div>
+
+                     <!-- Price input -->
+                      <div class="item-price">
+                        <span class="label">₹</span>
+                        <input type="number" class="price-input" value="60" min="0" type="number" placeholder="Price"/>
+                      </div>
+                </div>
+
+            </div>
+
+
+            <div class="grocery-item">
+                <!-- CheckBox -->
+                <input type="checkbox" class="item-check"/>
+                <!-- Image -->
+                <img src="./images/Logo.jpg" alt="Rice" class="item-icon" />
+
+                 <!-- Item details -->
+                <div class="item-detail">
+                    <div class="item-name">Rice</div>
+
+                    <!-- Quantity control -->
+                    <div class="item-quantity">
+                          <span class="label">Qty:</span>
+
+                          <input
+                            type="number"
+                            class="qty-wheel"
+                            min="0"
+                            max="50"
+                            value="1"
+                          />
+
+                          <span class="unit">kg</span>
+                    </div>
+
+                     <!-- Price input -->
+                      <div class="item-price">
+                        <span class="label">₹</span>
+                        <input type="number" class="price-input" value="60" min="0" type="number" placeholder="Price"/>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="grocery-item">
+                <!-- CheckBox -->
+                <input type="checkbox" class="item-check"/>
+                <!-- Image -->
+                <img src="./images/Logo.jpg" alt="Rice" class="item-icon" />
+
+                 <!-- Item details -->
+                <div class="item-detail">
+                    <div class="item-name">Rice</div>
+
+                    <!-- Quantity control -->
+                    <div class="item-quantity">
+                          <span class="label">Qty:</span>
+
+                          <input
+                            type="number"
+                            class="qty-wheel"
+                            min="0"
+                            max="50"
+                            value="1"
+                          />
+
+                          <span class="unit">kg</span>
+                    </div>
+
+                     <!-- Price input -->
+                      <div class="item-price">
+                        <span class="label">₹</span>
+                        <input type="number" class="price-input" value="60" min="0" type="number" placeholder="Price"/>
+                      </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="display">
+          <h3>Final Shopping List</h3>
+
+          <table class="final-table">
+            <thead>
+              <tr>
+                <th>✓</th>
+                <th>#</th>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>₹ / Unit</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+        
+            <tbody id="finalTableBody">
+              <!-- Rows will be injected by JS -->
+            </tbody>
+          </table>
+      
+          <div class="total-card">
+            Estimated Total: ₹ <span id="totalAmount">0</span>
+          </div>
+        </div>
+
+      </div>
+      </main>
+     
+
+
+    <script src="style.js"></script>
+</body>
+</html>
